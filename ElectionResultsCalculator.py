@@ -20,10 +20,10 @@ weights = np.array([0.57642149, 1.45889644, -1.06019027, 1.13938594, 0.99448702,
 
 
 
-election1_predictions = np.dot(election1_polls.T, weights
+election1_predictions = np.dot(election1_polls.T, weights)
 scale_factor = 100 / np.sum(election1_predictions)
 election1_predictions *= scale_factor
 
-print("Seçim Sonucu:")
+print("Results:")
 for i in range(len(election1_names[0])):
     print(election1_names[0][i] + ": " + str(round(election1_predictions[i], 2)) + "%")
